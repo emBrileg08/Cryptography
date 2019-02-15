@@ -19,8 +19,16 @@ elif choice=="e":
     message=list(input("Message: "))
     key=list(input("Key: "))
     length=len(message)
+    while len(key)<length:
+        key.extend(key[::])
     for x in range(0,length):
         num=associations.find(message[x])
         num2=associations.find(key[x])
         num3=num+num2
-        print(associations[num3],end="")
+        if (num3/87)<1:
+            print(associations[num3],end="")
+        elif (num3%87)==0:
+            print(associations[86],end="")
+        else:
+            remain=num3%87
+            print(associations[remain],end="")
