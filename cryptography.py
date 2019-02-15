@@ -32,3 +32,7 @@ elif choice=="e":
         else:
             remain=num3%87
             print(associations[remain],end="")
+
+print(associations.find("="))
+print(associations.find("r"))
+print(associations[97%87])
