@@ -25,14 +25,15 @@ elif choice=="e":
         num=associations.find(message[x])
         num2=associations.find(key[x])
         num3=num+num2
-        if (num3/87)<1:
+        if (num3/84)<1:
             print(associations[num3],end="")
-        elif (num3%87)==0:
-            print(associations[86],end="")
+        elif (num3%84)==0:
+            print(associations[84],end="")
         else:
-            remain=num3%87
-            print(associations[remain],end="")
-
-print(associations.find("="))
-print(associations.find("r"))
-print(associations[97%87])
+            remain=num3%84
+            print(associations[remain-1],end="")
+elif choice=="d":
+    decrypt=input("Message: ")
+    ki= input("Key: ")
+else:
+    print("Did not understand command, try again.")
