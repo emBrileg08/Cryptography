@@ -33,7 +33,15 @@ elif choice=="e":
             remain=num3%84
             print(associations[remain-1],end="")
 elif choice=="d":
-    decrypt=input("Message: ")
-    ki= input("Key: ")
+    message=list(input("Message: "))
+    key=list(input("Key: "))
+    length=len(message)
+    while len(key)<length:
+        key.extend(key[::])
+    for x in range(0,length):
+        num=associations.find(message[x])
+        num2=associations.find(key[x])
+        num3=num-num2
+        print(associations[num3],end="")
 else:
     print("Did not understand command, try again.")
