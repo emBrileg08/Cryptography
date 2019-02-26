@@ -46,5 +46,6 @@ while choice!= "q":
             num2=associations.find(key[x])
             num3=num-num2
             print(associations[num3],end="")
+        print("")
     else:
         print("Did not understand command, try again.")
